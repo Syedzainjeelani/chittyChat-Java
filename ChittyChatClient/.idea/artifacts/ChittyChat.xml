@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="ChittyChat">
+    <output-path>$PROJECT_DIR$/out/artifacts/ChittyChat</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="ChattingApp.Main" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="ChittyChat.jar">
+        <element id="module-output" name="ChittyChat" />
+        <element id="library" level="project" name="fontawesomefx-glyphsbrowser-all-1.0" />
+        <element id="library" level="project" name="jfoenix-8.0.7" />
+        <element id="library" level="project" name="mysql-connector-java-5.1.47" />
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Arc?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="messengerRoot" focusTraversable="true" opacity="0.89" prefHeight="605.0" prefWidth="776.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ChattingApp.Controllers.MessengerController">
+    <children>
+        <AnchorPane layoutX="5.0" prefHeight="600.0" prefWidth="765.0" style="-fx-background-color: #6FD6FF;">
+            <children>
+                <Pane prefHeight="601.0" prefWidth="240.0" style="-fx-background-color: #1d232a;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Pane layoutX="9.0" layoutY="8.0" prefHeight="112.0" prefWidth="225.0" style="-fx-background-color: #6FD6FF;">
+                            <children>
+                                <ImageView fitHeight="100.0" fitWidth="102.0" layoutX="7.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Images/user1.png" />
+                                    </image>
+                                </ImageView>
+                                <Circle fx:id="onOffCircle" fill="#25e448" layoutX="121.0" layoutY="69.0" radius="6.0" stroke="#515151" strokeType="INSIDE" />
+                                <VBox alignment="CENTER" layoutX="126.0" layoutY="7.0" prefHeight="100.0" prefWidth="90.0">
+                                    <children>
+                                        <Text fx:id="userLabel" fill="#575656" strokeType="OUTSIDE" strokeWidth="0.0" text="User" wrappingWidth="85.50610329210758">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="2.0" top="2.0" />
+                                            </VBox.margin>
+                                        </Text>
+                                        <Text fx:id="onOffText" fill="#656565" lineSpacing="2.0" stroke="#4d4d4d" strokeType="OUTSIDE" strokeWidth="0.0" text="Online" underline="true" wrappingWidth="85.50610329210758">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                    <padding>
+                                        <Insets left="5.0" />
+                                    </padding>
+                                </VBox>
+                                <Arc fill="DODGERBLUE" layoutX="123.0" layoutY="49.0" length="270.0" radiusX="7.0" radiusY="6.0" startAngle="45.0" stroke="#515151" strokeType="INSIDE" type="ROUND" />
+                            </children>
+                        </Pane>
+                        <Pane layoutX="8.0" layoutY="126.0" prefHeight="473.0" prefWidth="225.0" style="-fx-background-color: #363D45;">
+                            <children>
+                                <VBox alignment="TOP_CENTER" prefHeight="476.0" prefWidth="225.0">
+                                    <children>
+                                        <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="36.0" prefWidth="221.0" style="-fx-background-color: white; -fx-background-radius: 100PX;">
+                                            <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                            </padding>
+                                            <children>
+                                                <TextField fx:id="searchField" disable="true" prefHeight="34.0" prefWidth="176.0" promptText="Search" style="-fx-background-color: white;" HBox.hgrow="ALWAYS" />
+                                                <FontAwesomeIconView fill="#868686" glyphName="SEARCH" size="16">
+                                                    <HBox.margin>
+                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                    </HBox.margin>
+                                                </FontAwesomeIconView>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets top="5.0" />
+                                            </VBox.margin>
+                                        </HBox>
+                                        <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="225.0">
+                                            <children>
+                                                <Button fx:id="friendsButton" mnemonicParsing="false" onAction="#showFriendList" prefHeight="38.0" prefWidth="100.0" style="-fx-background-color: #6FD6FF;" text="Friends">
+                                                    <HBox.margin>
+                                                        <Insets left="2.0" right="22.0" top="5.0" />
+                                                    </HBox.margin>
+                                                </Button>
+                                                <Button fx:id="groupsButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#showGroupList" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #6FD6FF;" text="Groups">
+                                                    <HBox.margin>
+                                                        <Insets right="2.0" top="5.0" />
+                                                    </HBox.margin>
+                                                </Button>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets top="5.0" />
+                                            </VBox.margin>
+                                        </HBox>
+                                        <Line endX="30.0" layoutX="110.0" layoutY="127.0" opacity="0.5" startX="-100.0" strokeWidth="0.5" />
+                                        <Button fx:id="addButton" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addRemoveFg" prefHeight="30.0" prefWidth="210.0" style="-fx-background-color: #6FD6FF;" text="Add Friends" />
+                                        <Line endX="70.0" opacity="0.5" startX="-100.0" strokeWidth="0.5" />
+                                        <JFXListView fx:id="fgListView" fixedCellSize="40.0" maxHeight="-Infinity" onMouseClicked="#handleListViewClick" prefHeight="357.0" prefWidth="225.0" style="-fx-background-color: white;">
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                            <effect>
+                                                <ColorAdjust />
+                                            </effect>
+                                        </JFXListView>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </Pane>
+                    </children>
+                </Pane>
+                <Pane layoutX="240.0" prefHeight="60.0" prefWidth="525.0" style="-fx-background-color: #6FD6FF;">
+                    <children>
+                        <Line blendMode="MULTIPLY" endX="369.00006103515625" endY="1.52587890625E-5" layoutX="158.0" layoutY="60.0" opacity="0.3" startX="-158.0" startY="1.52587890625E-5" strokeWidth="0.5" />
+                        <Line blendMode="GREEN" endX="23.5" endY="27.5" layoutX="410.0" layoutY="33.0" opacity="0.3" startX="23.5" startY="-33.0" strokeLineCap="BUTT" strokeWidth="0.5" />
+                        <Label fx:id="friendNameLabel" layoutX="36.0" layoutY="17.0" prefHeight="35.0" prefWidth="280.0" text="Friend Name..." textFill="#4d4d4d">
+                            <font>
+                                <Font name="System Italic" size="18.0" />
+                            </font>
+                        </Label>
+                        <Line blendMode="MULTIPLY" endX="19.5" endY="29.0" layoutX="16.0" layoutY="30.0" opacity="0.5" startX="-16.0" startY="-20.707107543945312" stroke="#23929a" />
+                        <Line endX="-0.25" endY="14.707107543945312" layoutX="19.0" layoutY="44.0" opacity="0.5" startX="-11.0" startY="-44.0" stroke="#778889" />
+                        <Circle fill="#2a94f775" layoutX="484.0" layoutY="29.0" radius="23.0" stroke="#464646" strokeType="INSIDE" />
+                        <VBox layoutX="465.0" layoutY="14.0" prefHeight="30.0" prefWidth="28.0">
+                            <children>
+                                <Line endX="40.0" startX="10.0" stroke="#434242">
+                                    <VBox.margin>
+                                        <Insets bottom="2.0" left="4.0" right="4.0" top="7.0" />
+                                    </VBox.margin>
+                                    <effect>
+                                        <ColorAdjust brightness="-0.52" contrast="0.43" hue="-0.36" saturation="0.36" />
+                                    </effect>
+                                </Line>
+                        <HBox maxWidth="-Infinity" minWidth="-Infinity" onMouseClicked="#logoutPopup" prefHeight="12.0" prefWidth="12.0">
+                           <children>
+                              <Circle fill="#25e448" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Circle>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="13.0" />
+                           </VBox.margin>
+                        </HBox>
+                                <Line endX="40.0" startX="10.0" stroke="#434242">
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" left="4.0" right="4.0" top="2.0" />
+                                    </VBox.margin>
+                                    <effect>
+                                        <ColorAdjust brightness="-0.52" contrast="0.43" hue="-0.36" saturation="0.36" />
+                                    </effect>
+                                </Line>
+                            </children>
+                        </VBox>
+                    </children>
+                </Pane>
+                <StackPane layoutX="239.0" layoutY="541.0" prefHeight="60.0" prefWidth="528.0">
+                    <children>
+                        <HBox alignment="TOP_CENTER" prefHeight="45.0" prefWidth="521.0" StackPane.alignment="CENTER">
+                            <children>
+                                <FontAwesomeIconView fx:id="dataTransfer" disable="true" fill="#434343" glyphName="CHAIN" onMouseClicked="#sendData" size="20">
+                                    <HBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="12.0" />
+                                    </HBox.margin>
+                                </FontAwesomeIconView>
+                                <TextField fx:id="messageField" disable="true" maxWidth="-Infinity" onKeyReleased="#handleMessageKeyReleased" prefHeight="45.0" prefWidth="470.0" promptText="Type your message" style="-fx-background-color: #b5ffff;" HBox.hgrow="ALWAYS">
+                                    <HBox.margin>
+                                        <Insets />
+                                    </HBox.margin>
+                                </TextField>
+                        <JFXButton fx:id="send" defaultButton="true" disable="true" onAction="#sendMessage" prefHeight="45.0" prefWidth="31.0" ripplerFill="#ddc0c0" text=" ">
+                           <graphic>
+                                      <FontAwesomeIconView disable="true" fill="#434343" glyphName="SEND" size="20" wrappingWidth="10.0" />
+                           </graphic>
+                        </JFXButton>
+                            </children>
+                        </HBox>
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                    </padding>
+                </StackPane>
+                <ScrollPane fx:id="chatScrollPane" focusTraversable="false" hbarPolicy="NEVER" hmax="0.0" layoutX="240.0" layoutY="60.0" pannable="true" prefHeight="490.0" prefWidth="527.0" vbarPolicy="ALWAYS">
+                    <content>
+                        <VBox fx:id="scrollVBox" focusTraversable="true" layoutY="5.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="520.0">
+                     <children>
+                        <Pane fx:id="loadingPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="487.0" prefWidth="515.0" visible="false">
+                           <children>
+                              <Label layoutX="167.0" layoutY="218.0" prefHeight="51.0" prefWidth="91.0" text="Loading">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="90.0" fitWidth="131.0" layoutX="258.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/loading-gif-transparent-background-4.gif" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+                    </content>
+                </ScrollPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="msgPopupPane" prefHeight="170.0" prefWidth="250.0" style="-fx-background-color: #6FD6FF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ChattingApp.Controllers.MsgPopupController">
+   <children>
+      <JFXTextArea fx:id="msgPopupTextArea" editable="false" focusColor="#1a44c3" layoutY="26.0" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: #B5ffff;" unFocusColor="#c4c4c448" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="26.0">
+         <padding>
+            <Insets bottom="5.0" />
+         </padding>
+      </JFXTextArea>
+      <JFXButton fx:id="msgPopupReply" defaultButton="true" layoutX="14.0" layoutY="133.0" onAction="#replyToFriend" style="-fx-background-color: #EA8D8D;" text="Reply" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="190.0" AnchorPane.topAnchor="135.0" />
+      <JFXButton fx:id="msgPopupCancel" cancelButton="true" layoutX="176.0" layoutY="133.0" onAction="#cancelMsgPopup" style="-fx-background-color: #EA8D8D;" text="Cancel" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="135.0" />
+      <Label fx:id="msgPopupLabel" layoutX="65.0" layoutY="6.0" prefHeight="17.0" prefWidth="130.0" text="Group or Friend msg" />
+   </children>
+   <effect>
+      <DropShadow height="15.07" radius="7.035" width="15.07" />
+   </effect>
+</AnchorPane>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane prefHeight="605.0" prefWidth="775.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ChattingApp.Controllers.LoginController">
+    <children>
+        <AnchorPane disable="true" layoutX="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="765.0" style="-fx-background-color: #6FD6FF;">
+            <children>
+                <Pane prefHeight="600.0" prefWidth="240.0" style="-fx-background-color: #1d232a;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Pane layoutX="9.0" layoutY="8.0" prefHeight="112.0" prefWidth="225.0" style="-fx-background-color: #6FD6FF;">
+                            <children>
+                                <ImageView fitHeight="100.0" fitWidth="102.0" layoutX="7.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Images/user1.png" />
+                                    </image>
+                                </ImageView>
+                                <Text fill="#575656" layoutX="132.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Online" wrappingWidth="49.50610329210758">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Text>
+                                <Circle fill="DODGERBLUE" layoutX="121.0" layoutY="56.0" radius="5.0" stroke="#515151" strokeType="INSIDE" />
+                            </children>
+                        </Pane>
+                        <Pane layoutX="8.0" layoutY="126.0" prefHeight="473.0" prefWidth="225.0" style="-fx-background-color: #363D45;">
+                            <children>
+                                <VBox alignment="TOP_CENTER" prefHeight="473.0" prefWidth="225.0">
+                                    <children>
+                                        <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="36.0" prefWidth="221.0" style="-fx-background-color: white; -fx-background-radius: 100PX;">
+                                            <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                            </padding>
+                                            <children>
+                                                <TextField prefHeight="34.0" prefWidth="176.0" promptText="Search" style="-fx-background-color: white;" HBox.hgrow="ALWAYS" />
+                                                <FontAwesomeIconView fill="#868686" glyphName="SEARCH" size="16">
+                                                    <HBox.margin>
+                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                    </HBox.margin>
+                                                </FontAwesomeIconView>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets top="5.0" />
+                                            </VBox.margin>
+                                        </HBox>
+                                        <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="225.0">
+                                            <children>
+                                                <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="55.0" style="-fx-background-color: #6FD6FF;" text="Friends">
+                                                    <HBox.margin>
+                                                        <Insets right="7.0" top="5.0" />
+                                                    </HBox.margin>
+                                                </Button>
+                                                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="55.0" style="-fx-background-color: #6FD6FF;" text="Groups">
+                                                    <HBox.margin>
+                                                        <Insets right="8.0" top="5.0" />
+                                                    </HBox.margin>
+                                                </Button>
+                                                <Button layoutX="65.0" layoutY="10.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #6FD6FF;" text="Conversations">
+                                                    <HBox.margin>
+                                                        <Insets top="5.0" />
+                                                    </HBox.margin>
+                                                </Button>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets top="5.0" />
+                                            </VBox.margin>
+                                        </HBox>
+                                        <Line endX="85.58580017089844" opacity="0.5" startX="-100.0" strokeWidth="0.5" />
+                                        <ListView maxHeight="-Infinity" prefHeight="388.0" prefWidth="225.0" style="-fx-background-color: white;">
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </ListView>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </Pane>
+                    </children>
+                </Pane>
+                <StackPane layoutX="239.0" layoutY="541.0" maxWidth="-Infinity" prefHeight="60.0" prefWidth="525.0">
+                    <children>
+                        <HBox alignment="TOP_CENTER" prefHeight="45.0" prefWidth="521.0" StackPane.alignment="CENTER">
+                            <children>
+                        <FontAwesomeIconView fill="#434343" glyphName="CHAIN" layoutX="494.0" layoutY="39.0" size="20">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="12.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                                <!--&lt;!&ndash;<FontAwesomeIconView fill="#434343" glyphName="CHAIN" size="20">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<HBox.margin>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<Insets bottom="5.0" left="5.0" right="5.0" top="12.0"/>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;</HBox.margin>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</FontAwesomeIconView>&ndash;&gt;-->
+                                <TextField maxWidth="-Infinity" prefHeight="45.0" prefWidth="470.0" promptText="Type your message" style="-fx-background-color: #b5ffff;" HBox.hgrow="ALWAYS">
+                                    <HBox.margin>
+                                        <Insets />
+                                    </HBox.margin>
+                                </TextField>
+                                <FontAwesomeIconView fill="#434343" glyphName="SEND" size="20">
+                                    <HBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="12.0" />
+                                    </HBox.margin>
+                                </FontAwesomeIconView>
+                            </children>
+                     <StackPane.margin>
+                        <Insets bottom="2.0" />
+                     </StackPane.margin>
+                        </HBox>
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="1.0" top="8.0" />
+                    </padding>
+                </StackPane>
+                <Pane layoutX="240.0" prefHeight="60.0" prefWidth="525.0" style="-fx-background-color: white;">
+                    <children>
+                        <Line blendMode="MULTIPLY" endX="369.00006103515625" endY="1.52587890625E-5" layoutX="158.0" layoutY="60.0" opacity="0.3" startX="-158.0" startY="1.52587890625E-5" strokeWidth="0.5" />
+                        <Line blendMode="GREEN" endX="23.5" endY="27.5" layoutX="410.0" layoutY="33.0" opacity="0.3" startX="23.5" startY="-33.0" strokeLineCap="BUTT" strokeWidth="0.5" />
+                        <Label layoutX="36.0" layoutY="17.0" prefHeight="35.0" prefWidth="280.0" textFill="#4d4d4d">
+                            <font>
+                                <Font name="System Italic" size="18.0" />
+                            </font>
+                        </Label>
+                        <Line blendMode="MULTIPLY" endX="19.5" endY="29.0" layoutX="16.0" layoutY="30.0" opacity="0.5" startX="-16.0" startY="-20.707107543945312" stroke="#23929a" />
+                        <Line endX="-0.25" endY="14.707107543945312" layoutX="19.0" layoutY="44.0" opacity="0.5" startX="-11.0" startY="-44.0" stroke="#778889" />
+                        <Circle fill="#2a94f775" layoutX="484.0" layoutY="29.0" radius="23.0" stroke="#464646" strokeType="INSIDE" />
+                    </children>
+                </Pane>
+            </children>
+            <effect>
+                <BoxBlur height="2.0" width="2.0" />
+            </effect>
+        </AnchorPane>
+        <AnchorPane opacity="0.5" prefHeight="605.0" prefWidth="775.0" style="-fx-background-color: black;" />
+        <AnchorPane layoutX="225.0" layoutY="40.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #FE4451;">
+            <children>
+                <StackPane prefHeight="500.0" prefWidth="400.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                    <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #6FD6FF;" StackPane.alignment="TOP_CENTER">
+                            <children>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 2em; -fx-font-family: Quicksand; -fx-font-weight: Bold; -fx-fill: WHITE;" text="Login">
+                                    <VBox.margin>
+                                        <Insets top="10.0" />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                    <effect>
+                                        <DropShadow color="#00000033" height="5.0" radius="2.0" spread="0.7" width="5.0" />
+                                    </effect>
+                                </Text>
+                                <Label fx:id="userCaution" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" prefWidth="245.0">
+                                    <VBox.margin>
+                                        <Insets left="27.0" top="110.0" />
+                                    </VBox.margin>
+                                </Label>
+                                <HBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="285.0">
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                    <children>
+                                        <FontAwesomeIconView fill="#656464" glyphName="USER" size="16" wrappingWidth="16.0">
+                                            <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="2.0" top="12.0" />
+                                            </HBox.margin>
+                                        </FontAwesomeIconView>
+                                        <TextField fx:id="userName" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#handleKeyReleased" prefHeight="30.0" prefWidth="250.0" promptText="User Name" style="-fx-background-color: #b5ffff;" HBox.hgrow="ALWAYS">
+                                            <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="TOP_RIGHT" layoutX="55.0" layoutY="152.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="285.0">
+                                    <children>
+                                        <FontAwesomeIconView fill="#656464" glyphName="KEY" size="16" wrappingWidth="16.0">
+                                            <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="2.0" top="12.0" />
+                                            </HBox.margin>
+                                        </FontAwesomeIconView>
+                                        <PasswordField fx:id="password" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#handleKeyReleased" prefHeight="30.0" prefWidth="250.0" promptText="Password" style="-fx-background-color: #b5ffff;">
+                                            <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                            </HBox.margin>
+                                        </PasswordField>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets top="10.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <JFXButton fx:id="loginButton" buttonType="RAISED" defaultButton="true" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#login" prefHeight="30.0" prefWidth="100.0" ripplerFill="#89cdff" style="-fx-background-color: #EA8D8D; -fx-background-radius: 100px;" text="Login" wrapText="true" VBox.vgrow="ALWAYS">
+                                    <VBox.margin>
+                                        <Insets left="20.0" top="15.0" />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </JFXButton>
+                                <ImageView fx:id="loading" disable="true" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                    <image>
+                                        <Image url="@../Images/35771931234507.564a1d2403b3a.gif" />
+                                    </image>
+                                    <VBox.margin>
+                                        <Insets left="20.0" />
+                                    </VBox.margin>
+                                </ImageView>
+                                <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Text fill="#4d4d4d" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account" HBox.hgrow="ALWAYS">
+                                            <HBox.margin>
+                                                <Insets bottom="8.0" right="8.0" />
+                                            </HBox.margin>
+                                        </Text>
+                                        <Text onMouseClicked="#showSignUpStage" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 1.5em; -fx-font-family: Quicksand; -fx-font-weight: Bold; -fx-fill: #FE4451;" text="Sign Up" wrappingWidth="68.140625">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <effect>
+                                                <DropShadow color="#00000016" height="5.0" radius="2.0" spread="0.7" width="5.0" />
+                                            </effect>
+                                            <HBox.margin>
+                                                <Insets bottom="5.0" />
+                                            </HBox.margin>
+                                        </Text>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets top="80.0" />
+                                    </VBox.margin>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                    <effect>
+                        <DropShadow color="#d7d7d7" />
+                    </effect>
+                </StackPane>
+            </children>
+            <effect>
+                <DropShadow blurType="TWO_PASS_BOX" color="#000000ac" height="29.9" radius="17.4125" spread="0.15" width="41.75" />
+            </effect>
+        </AnchorPane>
+    </children>
+</Pane>
